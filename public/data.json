@@ -23,17 +23,6 @@
     },
     {
         "id": 3,
-        "name": "Waterproof Sunscreen SPF 50",
-        "brand": "SunProtect",
-        "price": 12,
-        "rating": 4.8,
-        "stock": 25,
-        "description": "Broad spectrum SPF 50 sunscreen, water-resistant for 80 minutes.",
-        "image": "https://images.unsplash.com/photo-1556229174-5e42a494e57f?w=500",
-        "category": "Skincare"
-    },
-    {
-        "id": 4,
         "name": "Beach Straw Hat",
         "brand": "BeachLife",
         "price": 18,
@@ -42,6 +31,17 @@
         "description": "Wide brim straw hat for maximum sun protection at the beach.",
         "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=500",
         "category": "Accessories"
+    },
+    {
+        "id": 4,
+        "name": "Waterproof Sunscreen SPF 50",
+        "brand": "SunProtect",
+        "price": 12,
+        "rating": 4.8,
+        "stock": 25,
+        "description": "Broad spectrum SPF 50 sunscreen, water-resistant for 80 minutes.",
+        "image": "https://images.unsplash.com/photo-1556229174-5e42a494e57f?w=500",
+        "category": "Skincare"
     },
     {
         "id": 5,
