@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "UV Protection Sunglasses",
+        "brand": "SunShade",
+        "price": 15,
+        "rating": 4.7,
+        "stock": 10,
+        "description": "Premium UV protection sunglasses with polarized lenses, perfect for summer outings and beach days.",
+        "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500",
+        "category": "Accessories"
+    },
+    {
+        "id": 2,
+        "name": "Summer Floral Dress",
+        "brand": "SummerVibe",
+        "price": 35,
+        "rating": 4.9,
+        "stock": 15,
+        "description": "Lightweight floral dress perfect for hot summer days, made from breathable cotton.",
+        "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500",
+        "category": "Clothing"
+    },
+    {
+        "id": 3,
+        "name": "Waterproof Sunscreen SPF 50",
+        "brand": "SunProtect",
+        "price": 12,
+        "rating": 4.8,
+        "stock": 25,
+        "description": "Broad spectrum SPF 50 sunscreen, water-resistant for 80 minutes.",
+        "image": "https://images.unsplash.com/photo-1556229174-5e42a494e57f?w=500",
+        "category": "Skincare"
+    },
+    {
+        "id": 4,
+        "name": "Beach Straw Hat",
+        "brand": "BeachLife",
+        "price": 18,
+        "rating": 4.6,
+        "stock": 12,
+        "description": "Wide brim straw hat for maximum sun protection at the beach.",
+        "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=500",
+        "category": "Accessories"
+    },
+    {
+        "id": 5,
+        "name": "Summer Flip Flops",
+        "brand": "FootComfort",
+        "price": 10,
+        "rating": 4.5,
+        "stock": 30,
+        "description": "Comfortable and stylish flip flops for beach and casual wear.",
+        "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500",
+        "category": "Footwear"
+    },
+    {
+        "id": 6,
+        "name": "Portable Mini Fan",
+        "brand": "CoolBreeze",
+        "price": 8,
+        "rating": 4.4,
+        "stock": 20,
+        "description": "Rechargeable portable fan, perfect for hot summer days.",
+        "image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500",
+        "category": "Electronics"
+    }
+]

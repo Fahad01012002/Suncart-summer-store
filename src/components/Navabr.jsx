@@ -1,0 +1,60 @@
+import Link from 'next/link';
+import { ShoppingBag, Sun } from 'lucide-react';
+
+const Navabr = () => {
+    return (
+        <div>
+            <nav className="bg-linear-to-r from-orange-400 to-yellow-500 shadow-lg">
+                <div className="container mx-auto px-4 py-3">
+                    <div className="flex justify-between items-center">
+                        <Link href="/" className="flex items-center gap-2">
+                            <Sun className="w-8 h-8 text-white" />
+                            <span className="text-2xl font-bold text-white">SunCart</span>
+                        </Link>
+
+                        <div className="flex items-center gap-6">
+                            <Link href="/" className="text-white hover:text-yellow-200">Home</Link>
+                            <Link href="/products" className="text-white hover:text-yellow-200">Products</Link>
+                            <>
+                                <Link href="/login" className="text-white hover:text-yellow-200">Login</Link>
+                                <Link href="/register" className="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600">
+                                    Register
+                                </Link>
+                            </>
+
+                            {/* {session ? (
+                                <>
+                                    <Link href="/profile" className="flex items-center gap-2">
+                                        <Image
+                                            src={session.user.image || '/avatar.png'}
+                                            alt="Profile"
+                                            width={32}
+                                            height={32}
+                                            className="rounded-full"
+                                        />
+                                        <span className="text-white">{session.user.name}</span>
+                                    </Link>
+                                    <button
+                                        onClick={handleLogout}
+                                        className="bg-red-500 px-4 py-2 rounded-lg text-white hover:bg-red-600"
+                                    >
+                                        Logout
+                                    </button>
+                                </>
+                            ) : (
+                                <>
+                                    <Link href="/login" className="text-white hover:text-yellow-200">Login</Link>
+                                    <Link href="/register" className="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600">
+                                        Register
+                                    </Link>
+                                </>
+                            )} */}
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    );
+};
+
+export default Navabr;
