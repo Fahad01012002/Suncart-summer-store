@@ -7,11 +7,13 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaChrome, FaEye, FaEyeSlash } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa6";
+import { useRouter } from 'next/navigation';
 
 
 const LoginPage = () => {
 
     const [isShow, setIsShow] = useState(false);
+    const router = useRouter();
 
     const {
         register,
@@ -26,9 +28,14 @@ const LoginPage = () => {
             email: data.email, // required
             password: data.password, // required
             rememberMe: true,
-            callbackURL: "/",
-
+            redirect: false,
         });
+
+        if(res){
+            router.back();
+        }
+
+        console.log(res , error);   
     }
 
     const handleGoogleLogin = async () => {
@@ -36,7 +43,7 @@ const LoginPage = () => {
             provider: "google",
         });
 
-        console.log(data);
+        
     }
 
     return (
@@ -97,7 +104,7 @@ const LoginPage = () => {
                 <div className="mt-6">
                     <button
                         onClick={handleGoogleLogin}
-                        className="btn w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-lg hover:bg-gray-50 transition" cursor-pointer
+                        className="btn w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-lg hover:bg-gray-50 transition cursor-pointer" 
                     >
                         <FaGoogle className="w-5 h-5" />
                         Continue with Google

@@ -1,7 +1,16 @@
+'use client'
+
 import Link from 'next/link';
 import { ShoppingBag, Sun } from 'lucide-react';
+import { authClient } from '@/lib/auth-client';
+import Image from 'next/image';
 
 const Navabr = () => {
+
+    const { data: session } = authClient.useSession();
+
+    const users = session?.user;
+
     return (
         <div>
             <nav className="bg-linear-to-r from-orange-400 to-yellow-500 shadow-lg">
@@ -15,27 +24,21 @@ const Navabr = () => {
                         <div className="flex items-center gap-6">
                             <Link href="/" className="text-white hover:text-yellow-200">Home</Link>
                             <Link href="/products" className="text-white hover:text-yellow-200">Products</Link>
-                            <>
-                                <Link href="/login" className="text-white hover:text-yellow-200">Login</Link>
-                                <Link href="/register" className="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600">
-                                    Register
-                                </Link>
-                            </>
 
-                            {/* {session ? (
+                            {session ? (
                                 <>
                                     <Link href="/profile" className="flex items-center gap-2">
                                         <Image
-                                            src={session.user.image || '/avatar.png'}
+                                            src={users.image}
                                             alt="Profile"
                                             width={32}
                                             height={32}
                                             className="rounded-full"
                                         />
-                                        <span className="text-white">{session.user.name}</span>
+                                        <span className="text-white">{users.name}</span>
                                     </Link>
                                     <button
-                                        onClick={handleLogout}
+                                        onClick={async () => await authClient.signOut()}
                                         className="bg-red-500 px-4 py-2 rounded-lg text-white hover:bg-red-600"
                                     >
                                         Logout
@@ -48,7 +51,7 @@ const Navabr = () => {
                                         Register
                                     </Link>
                                 </>
-                            )} */}
+                            )}
                         </div>
                     </div>
                 </div>

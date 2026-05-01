@@ -24,13 +24,6 @@ const NotFoundPage = () => {
                 >
                     <Home size={18} /> Home
                 </Link>
-
-                <button
-                    onClick={() => window.history.back()}
-                    className="flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border border-slate-600  transition cursor-pointer"
-                >
-                    <ArrowLeft size={18} /> Go Back
-                </button>
             </motion.div>
         </div>
     );

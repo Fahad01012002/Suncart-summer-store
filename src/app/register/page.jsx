@@ -121,12 +121,14 @@ const RegisterPage = () => {
           </fieldset>
 
           {/* Button */}
-          <button
-            type="submit"
-            className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition"
-          >
-            Register
-          </button>
+          <Link href={'/'}>
+            <button
+              type="submit"
+              className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition"
+            >
+              Register
+            </button>
+          </Link>
         </form>
 
         {/* Link */}
