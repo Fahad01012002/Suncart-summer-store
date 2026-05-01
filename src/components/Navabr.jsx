@@ -39,14 +39,14 @@ const Navabr = () => {
                                     </Link>
                                     <button
                                         onClick={async () => await authClient.signOut()}
-                                        className="bg-red-500 px-4 py-2 rounded-lg text-white hover:bg-red-600"
+                                        className="btn  shadow-sm border-0 bg-red-500 px-4 py-2 rounded-lg text-white hover:bg-red-600"
                                     >
                                         Logout
                                     </button>
                                 </>
                             ) : (
                                 <>
-                                    <Link href="/login" className="text-white hover:text-yellow-200">Login</Link>
+                                    <Link href="/login"  className="btn  shadow-sm border-0 bg-green-500 px-4 py-2 rounded-lg text-white hover:bg-green-600"    >Login</Link>
                                     <Link href="/register" className="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600">
                                         Register
                                     </Link>
