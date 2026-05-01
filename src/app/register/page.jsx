@@ -7,10 +7,13 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FaImage } from "react-icons/fa6";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
 
   const [isShow, setIsShow] = useState(false);
+  const router = useRouter();
 
   const {
     register,
@@ -24,15 +27,20 @@ const RegisterPage = () => {
       password: data.password,
       name: data.name,
       image: data.photo,
-      callbackURL: "/login",
+      redirect: false,
     });
 
+    
+
     if (error) {
-      console.log("REGISTER ERROR:", error);
+      toast.error(`${error.message}`);
       return;
     }
 
-    console.log("REGISTER SUCCESS:", res);
+    if(!error){
+      toast.success(`${res.user.name} is successfully registerd`);
+      router.push("/login");
+    }
   };
 
   return (
@@ -121,14 +129,12 @@ const RegisterPage = () => {
           </fieldset>
 
           {/* Button */}
-          <Link href={'/'}>
             <button
               type="submit"
-              className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition"
+              className="btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition cursor-pointer"
             >
               Register
             </button>
-          </Link>
         </form>
 
         {/* Link */}

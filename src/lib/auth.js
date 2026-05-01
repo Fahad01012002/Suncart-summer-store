@@ -8,6 +8,7 @@ const db = client.db('suncart-summer-store');
 export const auth = betterAuth({
     emailAndPassword: {
         enabled: true,
+        autoSignIn: false,
     },
     socialProviders: {
         google: {

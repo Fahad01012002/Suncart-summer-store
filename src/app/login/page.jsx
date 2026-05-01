@@ -3,11 +3,12 @@
 import { authClient } from "@/lib/auth-client";
 import { Lock, Mail } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaChrome, FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa6";
-import { useRouter } from 'next/navigation';
+import { toast } from "react-toastify";
 
 
 const LoginPage = () => {
@@ -31,19 +32,20 @@ const LoginPage = () => {
             redirect: false,
         });
 
-        if(res){
-            router.back();
+        if(error){
+            toast.error(error.message);
         }
 
-        console.log(res , error);   
+        if(!error){
+             toast.success(`${res.user.name} is logged in Successfully`);
+             router.push('/');
+        }
     }
 
     const handleGoogleLogin = async () => {
         const data = await authClient.signIn.social({
             provider: "google",
         });
-
-        
     }
 
     return (
