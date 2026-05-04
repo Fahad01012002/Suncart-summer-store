@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ☀️ SunCart - Summer Essentials Store
 
-## Getting Started
+A modern, fully responsive e-commerce platform built with Next.js where users can explore and purchase seasonal summer products like sunglasses, summer outfits, skincare items, beach accessories, and more.
 
-First, run the development server:
+## 🚀 Live URL
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**[View Live Demo](https://suncart-summer-store-sigma.vercel.app)**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Project Purpose
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+SunCart is designed to provide a seamless summer shopping experience with:
+- Easy product browsing and detailed view
+- Secure authentication system
+- User profile management
+- Responsive design for all devices
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Key Features
 
-## Learn More
+### 🔐 Authentication
+- Email/Password registration and login
+- Google OAuth integration
+- Protected routes (product details requires login)
+- Session management with BetterAuth
 
-To learn more about Next.js, take a look at the following resources:
+### 🛍️ Product Management
+- Browse all summer products
+- Search products by name or brand
+- Filter products by category
+- Detailed product view with images, pricing, and descriptions
+- Related products suggestion
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 👤 User Features
+- Personal profile page
+- Update profile information (name and photo)
+- View order history (coming soon)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🎨 UI/UX
+- Fully responsive design (Mobile, Tablet, Desktop)
+- Modern gradient design
+- Toast notifications for user actions
+- Loading states for better UX
+- Summer-themed color scheme
 
-## Deploy on Vercel
+### 📱 Pages
+- **Home** - Hero section, popular products, summer care tips, top brands
+- **Products** - All products with search and filters
+- **Product Details** - Protected route with full product information
+- **Login/Register** - Authentication pages
+- **Profile** - User profile management
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 NPM Packages Used
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Core Framework
+| Package | Version | Purpose |
+|---------|---------|---------|
+| next | 14.x | React framework for production |
+| react | 18.x | UI library |
+| react-dom | 18.x | React DOM rendering |
+
+### Authentication
+| Package | Version | Purpose |
+|---------|---------|---------|
+| better-auth | latest | Authentication solution |
+| @better-auth/mongo-adapter | latest | MongoDB adapter for BetterAuth |
+| mongodb | latest | MongoDB driver |
+
+### UI & Styling
+| Package | Version | Purpose |
+|---------|---------|---------|
+| tailwindcss | latest | Utility-first CSS framework |
+| lucide-react | latest | Beautiful icons |
+| react-hot-toast | latest | Toast notifications |
+
+### Database
+| Package | Version | Purpose |
+|---------|---------|---------|
+| mongodb | latest | Database connection |
+| mongoose | optional | MongoDB ODM |
+
+## 🏗️ Project Structure

@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const handleLogout = async () => {
         await authClient.signOut();
-        setIsMenuOpen(false); // Close mobile menu after logout
+        setIsMenuOpen(false);
     };
 
     return (
