@@ -6,6 +6,7 @@ const client = new MongoClient(process.env.MONGO_URI);
 const db = client.db('suncart-summer-store');
 
 export const auth = betterAuth({
+    baseURL: process.env.BETTER_AUTH_URL,
     emailAndPassword: {
         enabled: true,
         autoSignIn: false,
