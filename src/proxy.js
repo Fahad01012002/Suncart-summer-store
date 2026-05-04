@@ -4,15 +4,12 @@ import { headers } from "next/headers"
 
 // This function can be marked `async` if using `await` inside
 export async function proxy(request) {
-    const { pathname } = request.nextUrl;
     const session = await auth.api.getSession({
-        headers: request.headers,
+        headers: await headers(),
     });
 
     if (!session) {
-        const loginUrl = new URL('/login', request.url);
-        loginUrl.searchParams.set('redirect', pathname);
-        return NextResponse.redirect(loginUrl);
+        return NextResponse.redirect(new URL('/login', request.url));
     }
     return NextResponse.next();
 
