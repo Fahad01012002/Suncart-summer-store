@@ -17,7 +17,7 @@ export const auth = betterAuth({
     
     //  Trusted origins with exact URLs
     trustedOrigins: [
-        process.env.NEXTAUTH_URL,
+        process.env.BETTER_AUTH_URL,
         "http://localhost:3000",
         "http://localhost:3001",
         "https://*.vercel.app",
@@ -25,7 +25,7 @@ export const auth = betterAuth({
     
     //  Add allowed origins for better compatibility
     allowedOrigins: [
-        process.env.NEXTAUTH_URL,
+        process.env.BETTER_AUTH_URL,
         "http://localhost:3000",
         "https://*.vercel.app",
     ].filter(Boolean),
